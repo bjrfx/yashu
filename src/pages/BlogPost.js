@@ -93,7 +93,7 @@ const BlogPost = () => {
   }, [error, navigate]);
 
   return (
-    <>
+    <div>
       {post && (
         <SEO 
           title={`${post.title} | Blog`}
@@ -136,7 +136,7 @@ const BlogPost = () => {
           <BlogDetail post={post} />
         </motion.div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -82,7 +82,7 @@ const Blog = () => {
           )}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

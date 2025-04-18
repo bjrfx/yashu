@@ -43,7 +43,7 @@ const Press = () => {
   };
 
   return (
-    <>
+    <div>
       <SEO 
         title="Press & Media | Professional Actress Portfolio"
         description="Press coverage, interviews, reviews, and media mentions from my acting career."
@@ -213,7 +213,7 @@ const Press = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
