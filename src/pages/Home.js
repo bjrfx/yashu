@@ -24,7 +24,7 @@ const Home = () => {
   const featuredGalleryImages = galleryImages.slice(0, 4);
 
   return (
-    <>
+    <div>
       <SEO 
         title="Actress Portfolio | Professional Acting Portfolio"
         description="Welcome to my professional acting portfolio. Explore my showreel, gallery, press mentions, and blog."
@@ -241,7 +241,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

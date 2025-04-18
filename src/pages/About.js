@@ -32,7 +32,7 @@ const About = () => {
   };
 
   return (
-    <>
+    <div>
       <SEO 
         title={`About ${profile.name} | Professional Actress`}
         description={profile.shortBio}
