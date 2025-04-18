@@ -89,7 +89,7 @@ const Showreel = () => {
   };
   
   return (
-    <>
+    <div>
       <SEO 
         title="Acting Showreel | Professional Actress Portfolio"
         description="Watch my acting showreel featuring clips from film, television, and theater performances."
@@ -254,7 +254,7 @@ const Showreel = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

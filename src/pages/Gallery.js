@@ -36,7 +36,7 @@ const GalleryPage = () => {
   };
   
   return (
-    <>
+    <div>
       <SEO 
         title="Photo Gallery | Professional Actress Portfolio"
         description="Explore a collection of professional photographs from various productions, photoshoots, and behind-the-scenes moments."
@@ -164,7 +164,7 @@ const GalleryPage = () => {
           </Button>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

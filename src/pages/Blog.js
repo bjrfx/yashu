@@ -33,7 +33,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <SEO 
         title="Blog | Acting Insights & Behind-the-Scenes"
         description="Read articles about acting, behind-the-scenes stories, and insights into the entertainment industry."
