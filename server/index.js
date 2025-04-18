@@ -10,10 +10,16 @@ const blogRoutes = require('./api/blog');
 const app = express();
 const PORT = process.env.SERVER_PORT || 8000;
 
+// Define the build path properly using absolute paths
+const BUILD_PATH = path.resolve(__dirname, '../build');
+const INDEX_HTML_PATH = path.resolve(BUILD_PATH, 'index.html');
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../build')));
+
+// Serve static files from the build folder
+app.use(express.static(BUILD_PATH));
 
 // API routes
 app.use('/api/contact', contactRoutes);
@@ -21,7 +27,7 @@ app.use('/api/blog', blogRoutes);
 
 // Serve the React app for any other requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../build', 'index.html'));
+  res.sendFile(INDEX_HTML_PATH);
 });
 
 // Error handling middleware
@@ -39,6 +45,8 @@ app.use((err, req, res, next) => {
 // Start the server
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on http://0.0.0.0:${PORT}`);
+  console.log(`Serving static files from: ${BUILD_PATH}`);
+  console.log(`Serving index.html for client routes from: ${INDEX_HTML_PATH}`);
 });
 
 // Graceful shutdown
